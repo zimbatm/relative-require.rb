@@ -1,0 +1,4 @@
+
+C = true
+
+require '../d'
