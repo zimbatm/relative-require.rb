@@ -4,6 +4,8 @@ relative-require.rb
 This module provides relative requires to the requiring file. This should solve
 most of the uglyness of pushing to $LOAD_PATH and loading #expand_path-ed files.
 
+Tested with ruby-1.8.7 and ruby-1.9.2
+
 by Jonas Pfenniger <jonas@pfenniger.name>
 
 Example project
