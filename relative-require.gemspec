@@ -1,4 +1,3 @@
-
 spec = Gem::Specification.new do |s|
   s.name = "relative-require"
   s.version = '1.0'
