@@ -1,24 +1,29 @@
 relative-require.rb
 ===================
 
-Provides relative (to the requiring file) requires. This should solve most of
-the uglyness of pushing to $LOAD_PATH and loading #expand_path-ed files.
+This module provides relative requires to the requiring file. This should solve
+most of the uglyness of pushing to $LOAD_PATH and loading #expand_path-ed files.
 
 by Jonas Pfenniger <jonas@pfenniger.name>
 
-Example
--------
+Example project
+---------------
 
-Dir with :
-* a.rb
-* b/c.rb
+This example shows that you don't have to mess with $LOAD_PATH anymore.
 
-in c.rb:
+$ export RUBYOPT=-relative-require
 
-  require '../a' # <= this ensures that c.rb is from the same path
-  
+lib/
+* myproject.rb
+* myproject/xyz.rb
+test/
+  test.rb
 
-$ ruby -relative <path/to/c>
+in myproject.rb
+  require './myproject/xyz.rb'
+
+in test.rb
+  require '../lib/myproject.rb'
 
 Licence
 -------
