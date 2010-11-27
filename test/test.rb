@@ -6,7 +6,7 @@ require 'test/unit'
 class TestRelative < Test::Unit::TestCase
   def test_that_it_works?
     assert_raise(LoadError) do
-      require './a'
+      require './fixtures/a'
     end
 
     require 'relative-require'
@@ -17,5 +17,10 @@ class TestRelative < Test::Unit::TestCase
 
     assert(defined? C)
     assert(defined? D)
+    
+    assert_nothing_raised do
+      require ['./fixtures/e', __FILE__]
+    end
+    assert(defined? E)
   end
 end
