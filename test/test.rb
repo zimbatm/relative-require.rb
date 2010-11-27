@@ -9,7 +9,7 @@ class TestRelative < Test::Unit::TestCase
       require './a'
     end
 
-    require 'relative'
+    require 'relative-require'
 
     assert_nothing_raised() do
       require './fixtures/a'
