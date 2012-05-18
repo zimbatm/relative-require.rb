@@ -1,4 +1,4 @@
-$:.reject{|x| x=='.'}
+$:.reject!{|x| x=='.'}
 $:.unshift File.expand_path('../../lib', __FILE__)
 
 require 'test/unit'
@@ -17,7 +17,7 @@ class TestRelative < Test::Unit::TestCase
 
     assert(defined? C)
     assert(defined? D)
-    
+
     assert_nothing_raised do
       require ['./fixtures/e', __FILE__]
     end

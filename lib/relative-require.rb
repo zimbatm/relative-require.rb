@@ -1,7 +1,3 @@
-$:.reject! do |x|
-  x == '.'
-end
-
 module Kernel
   ##
   # The Kernel#require from before Relative was loaded.
